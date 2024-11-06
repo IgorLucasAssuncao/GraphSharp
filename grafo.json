@@ -1,0 +1,115 @@
+{
+  "ehDirecionado": false,
+  "vertices": [
+    {
+      "id": "67e55044-10b1-426f-9247-bb680e5fe0c8",
+      "nome": "A"
+    },
+    {
+      "id": "b45e5a6d-7c3d-4d36-9b1c-8c4f5aa0f942",
+      "nome": "B"
+    },
+    {
+      "id": "9f8e4c3b-2a1d-4f5e-8b7c-6d5e4c3b2a1d",
+      "nome": "C"
+    },
+    {
+      "id": "1a2b3c4d-5e6f-4a8b-9c0d-1e2f3a4b5c6d",
+      "nome": "D"
+    },
+    {
+      "id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "nome": "E"
+    },
+    {
+      "id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "nome": "F"
+    }
+  ],
+  "arestas": [
+    {
+      "id": "4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d",
+      "origem": "67e55044-10b1-426f-9247-bb680e5fe0c8",
+      "destino": "b45e5a6d-7c3d-4d36-9b1c-8c4f5aa0f942",
+      "peso": 6
+    },
+    {
+      "id": "5b6c7d8e-9f0a-1b2c-3d4e-5f6a7b8c9d0e",
+      "origem": "67e55044-10b1-426f-9247-bb680e5fe0c8",
+      "destino": "9f8e4c3b-2a1d-4f5e-8b7c-6d5e4c3b2a1d",
+      "peso": 9
+    },
+    {
+      "id": "6c7d8e9f-0a1b-2c3d-4e5f-6a7b8c9d0e1f",
+      "origem": "67e55044-10b1-426f-9247-bb680e5fe0c8",
+      "destino": "1a2b3c4d-5e6f-4a8b-9c0d-1e2f3a4b5c6d",
+      "peso": 11
+    },
+    {
+      "id": "7d8e9f0a-1b2c-3d4e-5f6a-7b8c9d0e1f2a",
+      "origem": "67e55044-10b1-426f-9247-bb680e5fe0c8",
+      "destino": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "peso": 5
+    },
+    {
+      "id": "8e9f0a1b-2c3d-4e5f-6a7b-8c9d0e1f2a3b",
+      "origem": "67e55044-10b1-426f-9247-bb680e5fe0c8",
+      "destino": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "peso": 9
+    },
+    {
+      "id": "9f0a1b2c-3d4e-5f6a-7b8c-9d0e1f2a3b4c",
+      "origem": "b45e5a6d-7c3d-4d36-9b1c-8c4f5aa0f942",
+      "destino": "9f8e4c3b-2a1d-4f5e-8b7c-6d5e4c3b2a1d",
+      "peso": 3
+    },
+    {
+      "id": "0a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d",
+      "origem": "b45e5a6d-7c3d-4d36-9b1c-8c4f5aa0f942",
+      "destino": "1a2b3c4d-5e6f-4a8b-9c0d-1e2f3a4b5c6d",
+      "peso": 6
+    },
+    {
+      "id": "1b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e",
+      "origem": "b45e5a6d-7c3d-4d36-9b1c-8c4f5aa0f942",
+      "destino": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "peso": 5
+    },
+    {
+      "id": "2c3d4e5f-6a7b-8c9d-0e1f-2a3b4c5d6e7f",
+      "origem": "b45e5a6d-7c3d-4d36-9b1c-8c4f5aa0f942",
+      "destino": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "peso": 2
+    },
+    {
+      "id": "3d4e5f6a-7b8c-9d0e-1f2a-3b4c5d6e7f8a",
+      "origem": "9f8e4c3b-2a1d-4f5e-8b7c-6d5e4c3b2a1d",
+      "destino": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "peso": 4
+    },
+    {
+      "id": "4e5f6a7b-8c9d-0e1f-2a3b-4c5d6e7f8a9b",
+      "origem": "9f8e4c3b-2a1d-4f5e-8b7c-6d5e4c3b2a1d",
+      "destino": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "peso": 4
+    },
+    {
+      "id": "5f6a7b8c-9d0e-1f2a-3b4c-5d6e7f8a9b0c",
+      "origem": "1a2b3c4d-5e6f-4a8b-9c0d-1e2f3a4b5c6d",
+      "destino": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "peso": 5
+    },
+    {
+      "id": "6a7b8c9d-0e1f-2a3b-4c5d-6e7f8a9b0c1d",
+      "origem": "1a2b3c4d-5e6f-4a8b-9c0d-1e2f3a4b5c6d",
+      "destino": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "peso": 6
+    },
+    {
+      "id": "7b8c9d0e-1f2a-3b4c-5d6e-7f8a9b0c1d2e",
+      "origem": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "destino": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "peso": 8
+    }
+  ]
+}
