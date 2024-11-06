@@ -58,7 +58,7 @@ namespace Grafos.ModelosJson
                 // Criar vértices
                 foreach (var item in Vertices)
                 {
-                    var vertice = new Vertice(item.Id, item.Nome);
+                    var vertice = new Vertice(item.Id, item.Nome, 0);
                     mapaVertices.Add(vertice, new List<Aresta>());
                     mapaVerticesAuxiliar.Add(item.Id, vertice);
                 }
@@ -72,7 +72,10 @@ namespace Grafos.ModelosJson
 
                         // Adiciona aresta no vértice de origem
                         if (mapaVertices.TryGetValue(origem, out var arestasOrigem))
+                        {
                             arestasOrigem.Add(aresta);
+                            origem.Grau++;
+                        }
 
                         // Se não for direcionado, adiciona também no destino
                         if (!EhDirecionado)
@@ -81,6 +84,7 @@ namespace Grafos.ModelosJson
                             {
                                 var arestaReversa = new Aresta(item.Id, item.Peso, destino, origem, ClassificacaoAresta.Nenhuma); //Inverte origem e destino
                                 arestasDestino.Add(arestaReversa);
+                                destino.Grau++;
                             }
                         }
                     }

@@ -67,11 +67,11 @@
                         verticeOrigem,
                         ClassificacaoAresta.Nenhuma));
                 }
-                TotalVertices += 2;
+                TotalArestas += 2;
             }
             else
             {
-                TotalVertices++;
+                TotalArestas++;
             }
         }
 
@@ -82,7 +82,10 @@
                 var arestaParaRemover = Vertices[aresta.VerticeDeOrigem].Find(a => a.VerticeDeDestino.IdVertice == aresta.VerticeDeDestino.IdVertice);
 
                 if (arestaParaRemover != null)
+                {
                     Vertices[aresta.VerticeDeOrigem].RemoveAll(aresta => aresta.IdAresta == arestaParaRemover.IdAresta);
+                    aresta.VerticeDeOrigem.Grau--;
+                }
             }
 
             if (!EhDirecionado && Vertices.ContainsKey(aresta.VerticeDeDestino))
@@ -90,7 +93,10 @@
                 var arestaParaRemover = Vertices[aresta.VerticeDeDestino].Find(a => a.VerticeDeDestino.IdVertice == aresta.VerticeDeOrigem.IdVertice);
 
                 if (arestaParaRemover != null)
+                {
                     Vertices[aresta.VerticeDeDestino].RemoveAll(aresta => aresta.IdAresta == arestaParaRemover.IdAresta);
+                    aresta.VerticeDeDestino.Grau--;
+                }
             }
 
             TotalArestas = EhDirecionado ? TotalArestas - 1 : TotalArestas - 2;

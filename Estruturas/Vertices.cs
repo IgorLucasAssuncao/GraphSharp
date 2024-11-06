@@ -17,17 +17,19 @@ public class Vertice : IEquatable<Vertice>
 {
     public Guid IdVertice { get; set; }
     public string Name { get; set; }
+    public int Grau { get; set; }
 
     public DeepSearchData? DeepSearchData { get; private set; }
 
-    public Vertice(Guid id, string name)
+    public Vertice(Guid id, string name, int grau)
     {
         IdVertice = id;
         Name = name;
         DeepSearchData = new DeepSearchData();
+        Grau = grau;
     }
 
-    public Vertice() : this(Guid.NewGuid(), string.Empty)
+    public Vertice() : this(Guid.NewGuid(), string.Empty, 0)
     {
     }
 
