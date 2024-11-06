@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using static Grafos.Enums;
+    using static global::Grafos.Enums;
 
     public partial class Grafo
     {
@@ -136,17 +136,5 @@
 
             return resultado.ToString();
         }
-
-        // Métodos auxiliares adicionais
-        public bool VerticeExiste(Vertice vertice)
-        {
-            return Vertices.ContainsKey(vertice);
-        }
-
-        public List<Aresta> ObterArestas(Vertice vertice)
-        {
-            return Vertices.TryGetValue(vertice, out var arestas) ? arestas : new List<Aresta>();
-        }
-
     }
 }

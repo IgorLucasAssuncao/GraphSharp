@@ -34,6 +34,9 @@ namespace ProjetoGrafos
             }
             Console.WriteLine($"Tem ciclo: {AgmKruskal.BuscaEmProfundidade(Guid.Parse("67e55044-10b1-426f-9247-bb680e5fe0c8"))}");
 
+            grafoFinal.Dijkstra(new Guid("3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"));
+            grafoFinal.ImprimirTabelaDijkstra();
+
         }
     }
 }

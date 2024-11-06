@@ -1,6 +1,6 @@
 ﻿namespace Grafos
 {
-    public class Enums
+    public static class Enums
     {
         public enum ClassificacaoAresta
         {

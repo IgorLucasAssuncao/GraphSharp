@@ -26,7 +26,6 @@
                     agm.RemoverAresta(arestaParaInserir);
                     arestasOrdenadas.Remove(arestaParaInserir);
                 }
-
             }
             while (arestasInseridasNaAgm.Count < Vertices.Count - 1);
 

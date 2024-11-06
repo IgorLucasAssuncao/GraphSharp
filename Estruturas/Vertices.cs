@@ -13,25 +13,47 @@ public class DeepSearchData
     }
 }
 
+public class DijkstraData
+{
+    public int Distance { get; set; }
+    public Vertice? Father { get; set; }
+
+    public DijkstraData()
+    {
+        Distance = int.MaxValue;
+        Father = null;
+    }
+}
+
 public class Vertice : IEquatable<Vertice>
 {
     public Guid IdVertice { get; set; }
     public string Name { get; set; }
     public int Grau { get; set; }
 
-    public DeepSearchData? DeepSearchData { get; private set; }
+    #region Atributos para algoritmos
+
+    public DeepSearchData? DeepSearchData { get; set; }
+
+    public DijkstraData? DijkstraData { get; set; }
+
+    #endregion Atributos para algoritmos
+
 
     public Vertice(Guid id, string name, int grau)
     {
         IdVertice = id;
         Name = name;
         DeepSearchData = new DeepSearchData();
+        DijkstraData = new DijkstraData();
         Grau = grau;
     }
 
     public Vertice() : this(Guid.NewGuid(), string.Empty, 0)
     {
     }
+
+    #region DeepSearch
 
     public void SetDiscoveryTime(int value)
     {
@@ -49,12 +71,10 @@ public class Vertice : IEquatable<Vertice>
         }
     }
 
-    public void SetFather(Vertice vertex)
+    public Vertice SetFather(Vertice vertex)
     {
-        if (DeepSearchData != null)
-        {
-            DeepSearchData.Father = vertex;
-        }
+        DeepSearchData.Father = vertex;
+        return this;
     }
 
     public Vertice? GetFather()
@@ -77,6 +97,44 @@ public class Vertice : IEquatable<Vertice>
     {
         DeepSearchData = new DeepSearchData();
     }
+
+    #endregion DeepSearch
+
+    #region Dk
+    public int getDistanceDk()
+    {
+        return DijkstraData?.Distance ?? 0;
+    }
+
+    public Vertice? getFatherDk()
+    {
+        return DijkstraData?.Father;
+    }
+
+    public Vertice setFatherDk(Vertice vertex)
+    {
+        if (DijkstraData != null)
+        {
+            DijkstraData.Father = vertex;
+        }
+
+        return this;
+    }
+
+    public void setDistanceDk(int value)
+    {
+        if (DijkstraData != null)
+        {
+            DijkstraData.Distance = value;
+        }
+    }
+
+    public void ResetDijkstraData()
+    {
+        DijkstraData = new DijkstraData();
+    }
+
+    #endregion Dk
 
     public bool Equals(Vertice? other)
     {
